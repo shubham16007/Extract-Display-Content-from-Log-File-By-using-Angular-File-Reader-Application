@@ -1,0 +1,17 @@
+<div class="mat-toolbar">
+  <a>Welcome to File-Reader-App</a>
+</div>
+<input type="file" class="inputfile" (change)="onChange($event.target.files)">
+
+<input id="search" #searchBox matInput (keyup.enter) = "onEnter(searchBox.value)" class="input">
+<button (click)="onEnter(searchBox.value)">Search</button>
+<p id="searching"></p>
+
+<div class="buttons">
+  <button   (click)="reloadPage()" tabIndex="6" >Refresh</button>
+  <p></p>
+<button (click)="exception()" >Find Exception!</button>
+<p id="demo"></p>
+<button (click)="errors()" >Find Errors!</button>
+<p id="exce"></p>
+</div>
